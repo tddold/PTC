@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{B0ACC9FC-21F0-4B64-8569-EA7195891F09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{FF5EDC67-8EBE-4EC8-9240-203FC53515DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PTC.Web", "Web\PTC.Web\PTC.Web.csproj", "{468B2312-50FD-40E7-83DD-33E7C3B3BAC2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{468B2312-50FD-40E7-83DD-33E7C3B3BAC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{468B2312-50FD-40E7-83DD-33E7C3B3BAC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{468B2312-50FD-40E7-83DD-33E7C3B3BAC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{468B2312-50FD-40E7-83DD-33E7C3B3BAC2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{468B2312-50FD-40E7-83DD-33E7C3B3BAC2} = {B0ACC9FC-21F0-4B64-8569-EA7195891F09}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C34F4BEC-3F31-43F6-888E-789D9774E5E0}
+	EndGlobalSection
+EndGlobal
