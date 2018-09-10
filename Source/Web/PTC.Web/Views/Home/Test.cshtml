@@ -1,0 +1,14 @@
+﻿@using PTC.Web.Controllers
+@model PTC.Web.ViewModels.Person
+@{
+    ViewBag.Title = "Test";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm(nameof(HomeController.Test), "Home", FormMethod.Post))
+{
+    @Html.EditorForModel()
+    <input type="submit"/>
+}
+

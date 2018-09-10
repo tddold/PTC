@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using PTC.Web.Models;
+using PTC.Web.ViewModels;
 
 namespace PTC.Web.Controllers
 {
