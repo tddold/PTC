@@ -12,6 +12,13 @@ namespace PTC.Web
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.LowercaseUrls = true;
+
+            routes.MapRoute(
+              name: "StaticPages",
+              url: "{action}",
+              defaults: new { controller = "Home" }
+          );
 
             routes.MapRoute(
                 name: "Default",
