@@ -13,8 +13,8 @@ namespace PTC.Web
     {
         protected void Application_Start()
         {
-            ViewEngines.Engines.Clear();
-            ViewEngines.Engines.Add(new RazorViewEngine());
+            // Register only one View Engines to up of performens rendering view
+            ViewEnginesConfiguration.RegisterViewEngines(ViewEngines.Engines);
 
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);

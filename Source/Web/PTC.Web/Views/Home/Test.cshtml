@@ -1,14 +1,16 @@
-﻿@using PTC.Web.Controllers
-@model PTC.Web.ViewModels.Person
-@{
+﻿@{
     ViewBag.Title = "Test";
 }
 
 <h2>@ViewBag.Title</h2>
 
-@using (Html.BeginForm(nameof(HomeController.Test), "Home", FormMethod.Post))
+@using (Html.BeginForm("FileUpload", "Home", FormMethod.Post, new { enctype = "multifile/form-data" }))
 {
-    @Html.EditorForModel()
-    <input type="submit"/>
+
+    <input type="file" name="peshoFile"  />
+    <input type="submit" />
 }
+
+
+
 

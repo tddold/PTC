@@ -1,4 +1,5 @@
 ﻿using PTC.Web.ViewModels;
+using System.Web;
 using System.Web.Mvc;
 
 namespace PTC.Web.Controllers
@@ -36,6 +37,23 @@ namespace PTC.Web.Controllers
         {
 
             return Content(person.Name + " " + person.Age);
+        }
+
+        [HttpPost]
+        public ActionResult FileUpload(HttpPostedFileBase peshoFile)
+        {
+            if (peshoFile != null)
+            {
+                peshoFile.SaveAs(Server.MapPath("~/Files/") + peshoFile.FileName);
+            }
+
+            return RedirectToAction(nameof(HomeController.Test));
+        }
+
+        [ChildActionOnly]
+        public ActionResult NumberPartial(int someNumber)
+        {
+            return PartialView("_Subrequest", someNumber);
         }
     }
 }

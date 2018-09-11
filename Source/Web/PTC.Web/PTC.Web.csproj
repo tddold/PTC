@@ -239,7 +239,9 @@
     </Compile>
     <Compile Include="Infrastructure\AdvertisementService.cs" />
     <Compile Include="Infrastructure\Filters\LogAttribute.cs" />
+    <Compile Include="Infrastructure\Helpers\HtmlExtensions.cs" />
     <Compile Include="Infrastructure\IAdvertisementService.cs" />
+    <Compile Include="App_Start\ViewEnginesConfiguration.cs" />
     <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="ViewModels\IdentityModels.cs" />
     <Compile Include="ViewModels\ManageViewModels.cs" />
@@ -282,6 +284,7 @@
     <Content Include="Scripts\esm\popper.js.map" />
     <Content Include="Scripts\esm\popper-utils.min.js.map" />
     <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="App_Code\DivHelpers.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -345,9 +348,11 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\Test.cshtml" />
+    <Content Include="Views\Home\_Subrequest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Files\" />
     <Folder Include="Views\Admin\" />
     <Folder Include="Views\Base\" />
   </ItemGroup>
