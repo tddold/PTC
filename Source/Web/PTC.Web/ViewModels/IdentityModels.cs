@@ -25,6 +25,8 @@ namespace PTC.Web.ViewModels
         {
         }
 
+        public virtual IDbSet<Person> Persons { get; set; }
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
