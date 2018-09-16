@@ -1,0 +1,32 @@
+﻿@using PTC.Web.Controllers
+
+@if (TempData["Success"] != null)
+{
+    <h1>
+        @TempData["Success"]
+    </h1>
+}
+
+<h1>Parameter Binding</h1>
+
+
+@using (@Html.BeginForm(nameof(BindingController.Parameter), "Binding", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        @Html.TextBox("first", 1, new { @class = "form-control", type = "number" })
+    </div>
+    <div>
+        @Html.CheckBox("second")
+    </div>
+    @Html.Submit()
+}
+
+<h1>Object Binding</h1>
+
+@Html.Partial("_ObjectBinding")
+
+<h1>Nested Object Binding</h1>
+
+@Html.Partial("_NestedObjecBindingtPartial")

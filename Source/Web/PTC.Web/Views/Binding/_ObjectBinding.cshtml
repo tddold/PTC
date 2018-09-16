@@ -1,0 +1,25 @@
+﻿@model PTC.Web.ViewModels.PersonViewModel
+
+@using (Html.BeginForm("Object", "Binding", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    @Html.EditorForModel(Model)
+
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.EditorFor(m => m.Name)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Age)
+        @Html.EditorFor(m => m.Age)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.IsActiv)
+        @Html.EditorFor(m => m.IsActiv)
+    </div>
+
+    @Html.Submit()
+}
