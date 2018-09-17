@@ -234,6 +234,7 @@
     <Compile Include="Controllers\BindingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TestingTemplatesController.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -356,6 +357,13 @@
     <Content Include="Views\Binding\Default.cshtml" />
     <Content Include="Views\Binding\_ObjectBinding.cshtml" />
     <Content Include="Views\Binding\_NestedObjecBindingtPartial.cshtml" />
+    <Content Include="Views\Binding\_CollectionOfObjectPartial.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\String.cshtml" />
+    <Content Include="Views\TestingTemplates\Index.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Int32.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DateTime.cshtml" />
+    <Content Include="Views\TestingTemplates\DisplayTemplates\PersonViewModel.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\DateTime.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

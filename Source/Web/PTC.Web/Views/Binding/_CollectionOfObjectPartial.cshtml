@@ -1,0 +1,27 @@
+﻿@model IList<PTC.Web.ViewModels.PersonViewModel>
+
+@using (Html.BeginForm("CollectionOfObjects", "Binding", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    for (var i = 0; i < 5; i++)
+    {
+        <h3>Person @i</h3>
+        <div>
+            @Html.LabelFor(m => Model[i].Name)
+            @Html.EditorFor(m => Model[i].Name)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => Model[i].Age)
+            @Html.EditorFor(m => Model[i].Age)
+        </div>
+
+        <div>
+            @Html.LabelFor(m => Model[i].IsActiv)
+            @Html.EditorFor(m => Model[i].IsActiv)
+        </div>
+    }
+
+    @Html.Submit()
+}

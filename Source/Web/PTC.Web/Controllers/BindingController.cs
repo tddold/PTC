@@ -37,6 +37,13 @@ namespace PTC.Web.Controllers
             return RedirectWitnSuccess(string.Format("{0} {1} {2}", person.Name, person.Address.City, person.Address.Country));
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CollectionOfObjects(IEnumerable<PersonViewModel> people)
+        {
+            return null;
+        }
+
         private ActionResult RedirectWitnSuccess(string msg)
         {
             TempData["Success"] = msg;

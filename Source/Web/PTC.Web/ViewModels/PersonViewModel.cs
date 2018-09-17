@@ -12,5 +12,7 @@ namespace PTC.Web.ViewModels
         public int Age { get; set; }
 
         public bool IsActiv { get; set; }
+
+        public DateTime RegisterOn { get; set; }
     }
 }
