@@ -1,0 +1,33 @@
+﻿@model PTC.Web.ViewModels.PersonViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("SavePerson", "DataValidation", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <div>
+        @Html.LabelFor(m => m.Name)
+        @Html.EditorFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.Age)
+        @Html.EditorFor(m => m.Age)
+        @Html.ValidationMessageFor(m => m.Age)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.IsActiv)
+        @Html.EditorFor(m => m.IsActiv)
+        @Html.ValidationMessageFor(m => m.IsActiv)
+    </div>
+
+    @Html.Submit()
+}
