@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PTC.Web.Infrastructure.Mapping;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Web;
 
 namespace PTC.Web.ViewModels
 {
-    public class PersonViewModel
+    public class PersonViewModel : IMapFrom<Person>
     {
         [Required]
         [StringLength(100, MinimumLength = 10)]
@@ -17,6 +18,6 @@ namespace PTC.Web.ViewModels
 
         public bool IsActiv { get; set; }
 
-        public DateTime RegisterOn { get; set; }
+        public DateTime? RegisterOn { get; set; }
     }
 }

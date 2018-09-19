@@ -9,6 +9,7 @@ namespace PTC.Web.Controllers
 {
     public class DataValidationController : Controller
     {
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
@@ -16,8 +17,13 @@ namespace PTC.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult SavePerson(PersonViewModel person)
+        public ActionResult Index(PersonViewModel person)
         {
+            if (!person.IsActiv)
+            {
+                ModelState.AddModelError(string.Empty, "You must be active");
+            }
+
             if (ModelState.IsValid)
             {
                 // sve to db
@@ -25,7 +31,7 @@ namespace PTC.Web.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            return View(nameof(Index), person);
+            return View(person);
         }
     }
 }
